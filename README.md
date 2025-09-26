@@ -22,10 +22,10 @@ Die Erweiterung einer Sammlung von Kochrezepten, die in Zeitschriften vorliegen,
 Im Augenblick (September 2025) ist nicht sichergestellt, dass alle benötigten npm Pakete frei von Schadcode sind. Ich verzichte deshalb bewusst darauf, node und Typescript zu verwenden und verwende oder erstelle MCP-Server in Python.
 
 ### KI Nutzung
-Die KI muss auf lokale Daten zugreifen können. Das geschieht mit MCP-Servern, die bewusst so ausgewählt, oder erstellt werden, dass sie ausschliesslich in einem Unterverzeichnis des Projektes arbeiten können und ausschliesslich in Python geschrieben worden sind.
+Die KI muss auf lokale Daten zugreifen können. Das geschieht mit MCP-Servern, die bewusst so ausgewählt, oder erstellt werden, dass sie ausschliesslich in einem Unterverzeichnis des Projektes arbeiten können und in Python geschrieben worden sind.
 
 ### Authentifizierung
-Die verwendeten MCP-Server werden ausschliesslich auf meiner lokalen Maschine verwendet. Ich verzichte deshalb bewusst auf Authentifizierung.
+Die verwendeten MCP-Server werden nur auf meiner lokalen Maschine verwendet. Ich verzichte deshalb bewusst auf Authentifizierung.
 Für den Zugriff auf, von der KI erstellte, HTML Dateien im Ausgangsverzeichnis, unterhalb des Projektverzeichnisses "Rezepte", verwende ich bewusst einen HTTP Zugang auf meinen lokalen PC, der nur aus dem lokalen Netzwerk heraus stattfindet.
 
 ## KI Funktionen
