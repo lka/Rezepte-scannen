@@ -3,7 +3,7 @@ Lasten-/Pflichtenheft um Rezepte zu scannen und mit KI zu verarbeiten
 
 # Lastenheft
 ## Ziel
-Erweiterung einer Sammlung von Kochrezepten, die in Zeitschriften vorliegen, die ich aber in meiner App "My Recipe Box" (ehemals "recette-tec") haben möchte.
+Die Erweiterung einer Sammlung von Kochrezepten, die in Zeitschriften vorliegen, die ich aber in meiner App "My Recipe Box" (ehemals "recette-tec") haben möchte.
 
 ## Voraussetzungen
 - Ein DIN A4 Flachbett-Scanner, eingestellt auf 300 dpi und jpeg mit hoher Auflösung (keine Kompression). Das Scan Ziel ist ein Eingangs Verzeichnis unterhalb von Rezepte im Dokumenten Ordner, das Format ist PDF. Das gescannte Dokument ist also unter [User]\Dokumente\Rezepte\Eingang\scan_yyyymmddMMss.pdf zu finden.
@@ -21,8 +21,10 @@ Erweiterung einer Sammlung von Kochrezepten, die in Zeitschriften vorliegen, die
 ### Verwendung einer KI
 Hier kommt Claude Desktop in der kostenlosen Version zur Verwendung.
 
-### Lesen des Dokumentes
-Dafür wird ein MCP-Server ["mcp-server-filesystem"](https://github.com/MarcusJellinghaus/mcp_server_filesystem.git) verwendet, der nur das Arbeitsverzeichnis frei gibt und nicht das ganze Filesystem.
+### Lesen / Schreiben von Dokumenten
+Dafür wird ein MCP-Server ["mcp-server-filesystem"](https://github.com/MarcusJellinghaus/mcp_server_filesystem.git) verwendet, der nur das entsprechende Arbeitsverzeichnis unter [User]\Dokumente\Rezepte frei gibt und nicht das ganze Filesystem.
 
 ### Texterkennung
+Das Eingangs-PDF enthält ein Bild des Rezeptes, das mit Hilfe von "tesseract" in Text umgewandelt wird. Den Zugriff für die KI erlaubt wiederum ein MCP-Server ["mcp-server-tesseract"](https://github.com/lka/mcp_server_tesseract.git).
+
 
