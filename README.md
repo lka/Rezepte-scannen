@@ -1,4 +1,4 @@
-# Rezepte-scannen
+# Rezepte scannen
 Lasten-/Pflichtenheft um Rezepte zu scannen und mit KI zu verarbeiten
 
 # Lastenheft
@@ -36,9 +36,13 @@ Hier kommt Claude Desktop in der kostenlosen Version zur Verwendung.
 Dafür wird ein MCP-Server ["mcp-server-filesystem"](https://github.com/MarcusJellinghaus/mcp_server_filesystem.git) verwendet, der nur das entsprechende Arbeitsverzeichnis unter [User]\Dokumente\Rezepte frei gibt und nicht das ganze Filesystem.
 
 ### Auswahl von Regionen aus dem Scan
+Manchmal sind in Zeitschriften mehrere Rezepte auf einer Seite dargestellt.
+Dann kann sowieso nur ich entscheiden, welches der Rezepte übernommen werden soll.
 Dafür wird der MCP-Server ["mcp-server-image-selector"](https://github.com/lka/mcp_server_image_selector.git) verwendet, der ein GUI öffnet, mit dem der Text und das Foto des Rezeptes ausgewählt werden können.
 
 ### Texterkennung
 Der Text-Anteil aus der Regionen Auswahl enthält ein Bild des Rezeptes, das mit Hilfe von "tesseract" in Text umgewandelt wird. Den Zugriff für die KI erlaubt wiederum ein MCP-Server ["mcp-server-tesseract"](https://github.com/lka/mcp_server_tesseract.git).
 
-
+### Der Prompt
+Damit der doch recht umfängliche Prompt zur Steuerung nicht immer neu eingegeben werden muss,
+habe ich einen MCP-Server ["PromptServer"](https://github.com/lka/mcp_server_prompt.git) erstellt.
